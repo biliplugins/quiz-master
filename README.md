@@ -1,4 +1,4 @@
-# Quiz Master #
+# Quiz Master ( UNDER DEVELOPMENT. DON'T USE THIS PLUGIN. ) #
 **Contributors:** [bhargavbhandari90](https://profiles.wordpress.org/bhargavbhandari90/)  
 **Donate link:** https://www.paypal.me/BnB90/20  
 **Tags:** plugin  
