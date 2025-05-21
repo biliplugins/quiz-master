@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Quiz Master 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/quiz-master\n"
-"POT-Creation-Date: 2025-05-14 11:48:55+00:00\n"
+"POT-Creation-Date: 2025-05-19 10:20:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,8 +24,48 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: app/admin/class-admin-main.php:63
+#: app/admin/class-admin-main.php:79
 msgid "Quiz Questions"
+msgstr ""
+
+#: app/admin/class-admin-main.php:106
+msgid "Require email before showing result"
+msgstr ""
+
+#: app/admin/class-admin-main.php:111
+msgid "Questions"
+msgstr ""
+
+#: app/admin/class-admin-main.php:115
+msgid "Add Question"
+msgstr ""
+
+#: app/admin/class-admin-main.php:119
+msgid "Result Messages"
+msgstr ""
+
+#: app/admin/class-admin-main.php:130 app/admin/class-admin-main.php:145
+msgid "Score Range:"
+msgstr ""
+
+#: app/admin/class-admin-main.php:131
+msgid "Min %"
+msgstr ""
+
+#: app/admin/class-admin-main.php:132
+msgid "Max %"
+msgstr ""
+
+#: app/admin/class-admin-main.php:136 app/admin/class-admin-main.php:151
+msgid "Remove"
+msgstr ""
+
+#: app/admin/class-admin-main.php:149
+msgid "Message:"
+msgstr ""
+
+#: app/admin/class-admin-main.php:155
+msgid "Add More Result Messages"
 msgstr ""
 
 #: quiz-master.php:92

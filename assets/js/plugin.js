@@ -86,13 +86,16 @@
 			const scorePercent = Math.round((correct / questions.length) * 100);
 			let resultMsg = '';
 
-			// if ( typeof( messages ) ) {
-			// 	messages.forEach(msg => {
-			// 		if (scorePercent >= parseInt(msg.min) && scorePercent <= parseInt(msg.max)) {
-			// 			resultMsg = msg.message;
-			// 		}
-			// 	});
-			// }
+			if ( typeof( messages ) ) {
+
+				console.log('messages',messages);
+
+				messages.forEach(msg => {
+					if (scorePercent >= parseInt(msg.min) && scorePercent <= parseInt(msg.max)) {
+						resultMsg = msg.message;
+					}
+				});
+			}
 
 			if (requireEmail) {
 				showEmailPrompt(scorePercent, resultMsg);
@@ -113,12 +116,29 @@
 			};
 
 			$.post(quizData.ajaxurl, payload, function (response) {
+
+				var current = 0;
+
 				container.html(`
 					<div class="quiz-result">
+						<div class="quiz-progress-bar">
+							<div class="quiz-progress-fill" style="width: 0%"></div>
+						</div>
 						<h3>Your Score: ${scorePercent}%</h3>
 						<p>${resultMsg}</p>
 					</div>
 				`);
+
+				var $fill = $('.quiz-progress-fill');
+
+				var interval = setInterval(function() {
+					if (current >= scorePercent) {
+						clearInterval(interval);
+					} else {
+						current++;
+						$fill.css('width', current + '%');
+					}
+				}, 10);
 			});
 		}
 
@@ -164,9 +184,6 @@
 					renderQuestion(currentIndex + 1);
 				});
 			} else {
-
-				console.log('question_index',question_index);
-
 				renderQuestion( question_index );
 			}
 		});

@@ -103,20 +103,20 @@ if ( ! class_exists( 'BWPQM_Admin_Core' ) ) {
 				<div class="email-require-wrap">
 					<label>
 						<input type="checkbox" name="quiz_email_required" value="1" <?php echo checked( $email_required, '1', false ); ?>>
-						<?php esc_html_e( 'Require email before showing result' ); ?>
+						<?php esc_html_e( 'Require email before showing result', 'quiz-master' ); ?>
 					</label>
 				</div>
 
 				<hr>
-				<h3><?php esc_html_e( 'Questions' ); ?></h3>
+				<h3><?php esc_html_e( 'Questions', 'quiz-master' ); ?></h3>
 				<div id="quiz-questions">
 					<!-- Render each question block -->
 				</div>
-				<button type="button" class="button button-primary" id="add-question"><?php esc_html_e( 'Add Question' ); ?></button>
+				<button type="button" class="button button-primary" id="add-question"><?php esc_html_e( 'Add Question', 'quiz-master' ); ?></button>
 
 				<hr>
 				<div id="quiz-results">
-					<h3><?php esc_html_e( 'Result Messages' ); ?></h3>
+					<h3><?php esc_html_e( 'Result Messages', 'quiz-master' ); ?></h3>
 					<?php
 
 					if ( ! empty( $result_messages ) ) {
@@ -127,13 +127,13 @@ if ( ! class_exists( 'BWPQM_Admin_Core' ) ) {
 
 							?>
 							<div class="result-message" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
-								<label><?php esc_html_e( 'Score Range:' ); ?></label>
-								<input type="number" name="quiz_result_messages[<?php echo esc_attr( $c ); ?>][min]" placeholder="<?php esc_html_e( 'Min %' ); ?>" style="width: 80px;" value="<?php echo esc_attr( $result_message['min'] ); ?>"> -
-								<input type="number" name="quiz_result_messages[<?php echo esc_attr( $c ); ?>][max]" placeholder="<?php esc_html_e( 'Max %' ); ?>" style="width: 80px;" value="<?php echo esc_attr( $result_message['max'] ); ?>">
+								<label><?php esc_html_e( 'Score Range:', 'quiz-master' ); ?></label>
+								<input type="number" name="quiz_result_messages[<?php echo esc_attr( $c ); ?>][min]" placeholder="<?php esc_html_e( 'Min %', 'quiz-master' ); ?>" style="width: 80px;" value="<?php echo esc_attr( $result_message['min'] ); ?>"> -
+								<input type="number" name="quiz_result_messages[<?php echo esc_attr( $c ); ?>][max]" placeholder="<?php esc_html_e( 'Max %', 'quiz-master' ); ?>" style="width: 80px;" value="<?php echo esc_attr( $result_message['max'] ); ?>">
 
 								<label>Message:</label>
 								<textarea class="result-message-editor" name="quiz_result_messages[<?php echo esc_attr( $c ); ?>][message]"><?php echo wp_kses_post( $result_message['message'] ); ?></textarea>
-								<button type="button" class="remove-result-message button-link"><?php esc_html_e( 'Remove' ); ?></button>
+								<button type="button" class="remove-result-message button-link"><?php esc_html_e( 'Remove', 'quiz-master' ); ?></button>
 							</div>
 							<?php
 							++$c;
@@ -142,17 +142,17 @@ if ( ! class_exists( 'BWPQM_Admin_Core' ) ) {
 
 						?>
 					<div class="result-message" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
-						<label><?php esc_html_e( 'Score Range:' ); ?></label>
+						<label><?php esc_html_e( 'Score Range:', 'quiz-master' ); ?></label>
 						<input type="number" name="quiz_result_messages[0][min]" placeholder="Min %" style="width: 80px;"> -
 						<input type="number" name="quiz_result_messages[0][max]" placeholder="Max %" style="width: 80px;">
 
-						<label><?php esc_html_e( 'Message:' ); ?></label>
+						<label><?php esc_html_e( 'Message:', 'quiz-master' ); ?></label>
 						<textarea class="result-message-editor" name="quiz_result_messages[0][message]"></textarea>
-						<button type="button" class="remove-result-message button-link"><?php esc_html_e( 'Remove' ); ?></button>
+						<button type="button" class="remove-result-message button-link"><?php esc_html_e( 'Remove', 'quiz-master' ); ?></button>
 					</div>
 					<?php } ?>
 				</div>
-				<button type="button" id="add-result-message" class="button button-primary"><?php esc_html_e( 'Add More Result Messages' ); ?></button>
+				<button type="button" id="add-result-message" class="button button-primary"><?php esc_html_e( 'Add More Result Messages', 'quiz-master' ); ?></button>
 			</div>
 			<script>
 				window.quizQuestions = <?php echo wp_json_encode( $questions ); ?>;
